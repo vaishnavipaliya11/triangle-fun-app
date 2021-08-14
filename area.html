@@ -17,24 +17,31 @@
 
       <form class="formForAngle">
 
-        <div class="userInputs"><p>angle one </p>
-          <input type="number" id="user-input-angleOne"
-           name="angles" value="angles" max="180"></input>
+        <div class="userInputs">
+          <label for="angleOne">angle one
+         <input type="number" class="angle-input"
+          name="angles" value="angles" max="180"></input>
+          </label>
 
-
-            <p>angle two </p>
-           <input type="number" id="user-input-angleTwo"
+            <label for="angleTwo">angle two
+           <input type="number" class="angle-input"
             name="angles" value="angles" max="180"></input>
+            </label>
 
-
-            <p>angle three </p>
-            <input type="number" id="user-input-angleThree"
-             name="angles" value="angles" max="180"></input>
+            <label for="angleThree">angle three
+           <input type="number" class="angle-input"
+            name="angles" value="angles" max="180" min="1"></input>
+            </label>
 
            </div>
 
       </form>
-      <button type="submit" name="btn-check">check</button>
+      <button type="submit" name="btn-check"
+      id="btn-check"> check</button>
+
+      <div class="errorDiv">
+
+      </div>
 
       <p>output will be shown here</p>
       <div class="output-div">
