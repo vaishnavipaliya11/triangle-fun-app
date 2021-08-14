@@ -5,6 +5,80 @@
     <title>area | triangle</title>
   </head>
   <body>
-    hello
+    <div class="options">
+      <a href="index.html">
+      <p>back</p>
+    </a>
+    </div>
+
+    <h1>Calculate Area</h1>
+    <p>select the options and enter the details according to it.</p>
+
+    <form class="formForSelectingOptions">
+      <div class="radio-option">
+        <label for="calArea1" class="label">
+        <input type="radio" id="calArea1"
+        name="calArea" value="calArea" >
+        If you have base and height length</label>
+      </div>
+
+      <div class="radio-option">
+        <label for="calArea2" class="label">
+        <input type="radio" id="calArea2"
+        name="calArea" value="calArea">
+      If you have length of three sides</label>
+      </div>
+    </form>
+
+
+      <div class="calculateAreaSection">
+        <form class="formForAreaCal">
+          <label for="">a=
+          <input type="number" class="userInputOptionOne"
+          name="userInput" value="userInput">
+          </label>
+
+          <label for="">b =
+          <input type="number" class="userInputOptionOne"
+          name="userInput" value="userInput">
+          </label>
+
+          <button type="submit"  id="checkAreaBtn"
+          name="areaIs">check</button>
+        </form>
+
+        <h2>calculated area will be shown here</h2>
+        <div class="output">
+
+        </div>
+      </div>
+
+      <div class="calculateAreaSection">
+        <form class="formForAreaCal">
+          <label for="">a=
+          <input type="number" class="userInputOptionTwo"
+          name="userInput" value="userInput">
+          </label>
+
+          <label for="">b =
+          <input type="number" class="userInputOptionTwo"
+          name="userInput" value="userInput">
+          </label>
+
+          <label for="">c =
+          <input type="number" class="userInputOptionThree"
+          name="userInput" value="userInput">
+          </label>
+
+          <button type="submit"  id="checkAreaBtn"
+          name="areaIs">check</button>
+        </form>
+        <h2>calculated area will be shown here</h2>
+        <div class="output">
+
+        </div>
+        </div>
+
+        <script src="calArea.js" charset="utf-8"></script>
   </body>
 </html>
