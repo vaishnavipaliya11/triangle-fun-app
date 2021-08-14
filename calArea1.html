@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>calculate area| triangle</title>
+    <link rel="stylesheet" href="calAngle.css">
   </head>
   <body>
 
@@ -14,17 +15,27 @@
 
     <div class="">
       <label for="base">base=
-      <input type="number" class="userInputOne"
+      <input type="number" class="userInput"
       name="base" value="base">
       </label>
 
       <label for="base">height=
-      <input type="number" class="userInputOne"
+      <input type="number" class="userInput"
       name="height" value="height">
       </label>
 
-      <button type="submit" name="calAreaBtn">
+      <button type="submit" name="calAreaBtn" id="calAreaBtn">
       calculate area </button>
+
+      <div class="errorDiv">
+
+      </div>
+
+        <h2>output will be calculated here</h2>
+        <div class="output-div">
+
+        </div>
     </div>
+    <script src="calArea1.js" charset="utf-8"></script>
   </body>
 </html>
