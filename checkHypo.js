@@ -1,7 +1,7 @@
 var sides = document.querySelectorAll(".sides-of-triangle")
 var checkHypoBtn = document.querySelector("#checkHypoBtn")
 var output = document.querySelector(".output-div")
-var formForHypotenus= document.forms[0];
+var errorDiv = document.querySelector(".errorDiv")
 
 
 function checkHypoBtnHandler() {
@@ -9,9 +9,10 @@ function checkHypoBtnHandler() {
   var sideTwo = Number(sides[1].value)
 
   if(sideOne==""|| sideTwo==""){
-    errorDiv.innerText="please fill all the sides"
+    errorDisplay("please fill all the sides")
   }else{
     calculateHypotenus(sideOne,sideTwo)
+    errorDiv.style.display="none";
   }
 }
 
@@ -20,5 +21,9 @@ function calculateHypotenus(sideOne,sideTwo){
   output.innerText= hypotenus
 }
 
+function errorDisplay(msg) {
+errorDiv.style.display="block"
+errorDiv.innerText=msg;
+}
 
 checkHypoBtn.addEventListener("click",checkHypoBtnHandler)
