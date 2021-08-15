@@ -9,10 +9,12 @@ function checkBtnHandler() {
   var angleThree = Number(userInputs[2].value)
 
   if(angleOne==""|| angleTwo==""||angleThree==""){
-    errorDisplay("fill all the angles")
+    errorDisplay("you have not filled all the angles")
+    outputDiv.style.display="none";
   }else {
     triangleFormed(angleOne,angleTwo,angleThree)
-    errorDiv.style.display="none"
+    errorDiv.style.display="none";
+    outputDiv.style.display="block"
   }
 }
 
@@ -21,9 +23,9 @@ function triangleFormed(angleOne,angleTwo,angleThree){
 var sum= angleOne+angleTwo+angleThree
 
   if(sum ===180){
-    outputDiv.innerText="it makes a triangle"
+    outputDiv.innerText="angles makes a triangle"
   }else {
-    outputDiv.innerText="don't make a triangle"
+    outputDiv.innerText="angles don't make a triangle"
   }
 }
 
