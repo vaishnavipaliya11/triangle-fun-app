@@ -11,9 +11,12 @@ var errorDiv = document.querySelector('.errorDiv')
 
  if(sideOne==""|| sideTwo==""||sideThree==""){
    errorDisplay("please fill out the feilds")
+   outputDiv.style.display="none";
  }else{
-   errorDiv.style.display="none"
+
    calculateAreaBySide(sideOne,sideTwo,sideThree)
+   errorDiv.style.display="none";
+   outputDiv.style.display="block";
  }
 }
 

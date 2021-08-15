@@ -9,10 +9,14 @@ function checkHypoBtnHandler() {
   var sideTwo = Number(sides[1].value)
 
   if(sideOne==""|| sideTwo==""){
+
     errorDisplay("please fill all the sides")
+      output.style.display="none";
+
   }else{
     calculateHypotenus(sideOne,sideTwo)
     errorDiv.style.display="none";
+    output.style.display="block";
   }
 }
 
@@ -22,7 +26,7 @@ function calculateHypotenus(sideOne,sideTwo){
 }
 
 function errorDisplay(msg) {
-errorDiv.style.display="block"
+errorDiv.style.display="block";
 errorDiv.innerText=msg;
 }
 
