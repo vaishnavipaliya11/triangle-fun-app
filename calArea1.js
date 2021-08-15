@@ -11,8 +11,11 @@ function calAreaBtnHandler(){
 
   if(base==""|| height==""){
     errorDisplay("please fill the inputs")
+    outputDiv.style.display="none"
   }else {
     calculateAreaBase(base,height)
+    outputDiv.style.display="block";
+    errorMsg.style.display="none"
   }
 }
 
