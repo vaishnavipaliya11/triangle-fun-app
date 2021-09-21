@@ -9,8 +9,8 @@ var errorDiv = document.querySelector('.errorDiv')
   var sideThree= Number(userInput[2].value);
 
 
- if(sideOne==""|| sideTwo==""||sideThree==""){
-   errorDisplay("please fill out the feilds")
+ if(sideOne==""|| sideTwo==""||sideThree=="" || sideOne<0 ||sideTwo<0 ||sideThree<0){
+   errorDisplay("please fill the feilds properly")
    outputDiv.style.display="none";
  }else{
 
@@ -22,8 +22,10 @@ var errorDiv = document.querySelector('.errorDiv')
 
 function calculateAreaBySide(a,b,c) {
   const s= a+b+c/2;
-  outputDiv.innerText = Math.sqrt(s*(s-a)*(s-b)*(s-c))
+  var result = Math.sqrt((s*(s-a)*(s-b)*(s-c)))
+  outputDiv.innerText = result.toFixed()
 }
+
 
 function errorDisplay(msg) {
 errorDiv.style.display="block";

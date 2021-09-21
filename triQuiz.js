@@ -5,9 +5,11 @@ var btnScoreSubmit = document.querySelector("#btnScoreSubmit")
 
 const ans = ["option1","option1","option1","option3","option3",]
 
-let score= 0
+
 
 triQuizForm.addEventListener("submit", (e)=>{
+
+  let score= 0
 
   e.preventDefault()
 

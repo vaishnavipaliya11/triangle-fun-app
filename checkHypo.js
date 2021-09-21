@@ -8,7 +8,7 @@ function checkHypoBtnHandler() {
   var sideOne= Number(sides[0].value)
   var sideTwo = Number(sides[1].value)
 
-  if(sideOne==""|| sideTwo==""){
+  if(sideOne==""|| sideTwo=="" || sideOne<0 ||sideTwo<0){
 
     errorDisplay("please fill all the sides")
       output.style.display="none";
@@ -21,8 +21,8 @@ function checkHypoBtnHandler() {
 }
 
 function calculateHypotenus(sideOne,sideTwo){
-  var hypotenus= Math.sqrt((sideOne*sideTwo)+(sideOne*sideTwo))
-  output.innerText= hypotenus
+  var hypotenus= Math.sqrt((sideOne*sideOne)+(sideTwo*sideTwo))
+  output.innerText= hypotenus.toFixed()
 }
 
 function errorDisplay(msg) {
